@@ -3,4 +3,4 @@ project(CS350Assign C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(CS350Assign main.c)
+add_executable(CS350Assign main.c knight.h temperature.h)

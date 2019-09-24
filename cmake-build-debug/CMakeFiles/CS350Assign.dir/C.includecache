@@ -6,11 +6,25 @@
 
 #IncludeRegexTransform: 
 
+/Users/michael/CLionProjects/CS350Assign/knight.h
+stdlib.h
+-
+stdio.h
+-
+
 /Users/michael/CLionProjects/CS350Assign/main.c
 stdio.h
 -
 math.h
 -
 stdlib.h
+-
+knight.h
+/Users/michael/CLionProjects/CS350Assign/knight.h
+temperature.h
+/Users/michael/CLionProjects/CS350Assign/temperature.h
+
+/Users/michael/CLionProjects/CS350Assign/temperature.h
+stdio.h
 -
 
