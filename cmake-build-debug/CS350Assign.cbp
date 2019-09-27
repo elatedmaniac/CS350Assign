@@ -78,6 +78,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/michael/CLionProjects/CS350Assign/gcd.h">
+			<Option target="CS350Assign"/>
+		</Unit>
 		<Unit filename="/Users/michael/CLionProjects/CS350Assign/knight.h">
 			<Option target="CS350Assign"/>
 		</Unit>

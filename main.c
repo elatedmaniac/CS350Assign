@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "knight.h"
 #include "temperature.h"
+#include "gcd.h"
 
 void triples(){
     for(int i=1;i<20;i++){
@@ -25,15 +26,19 @@ void triples(){
 
  void main() {
     //triples();
-    charts();
-    //display_board(board);
-    //knight_move(0,0);
-    //display_board(board);
+    //charts();
+    /*
     int *arr;
     arr = possible_moves();
     for (int i =0;i<8;i++){
         printf("%d\n",arr[i]);
     }
-    display_board(access_matrix);
-    printf("\nSize of access matrix: %d", sizeof(access_matrix));
+    */
+    //gcd_recurs(2,4);
+    //gcd_recurs(13,52);
+    //gcd_recurs(1,4);
+    solve();
+
+
+
 }
