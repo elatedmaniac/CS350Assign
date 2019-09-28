@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/michael/CLionProjects/CS350Assign/gcd.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/gcd.h
 stdio.h
 -
 
-/Users/michael/CLionProjects/CS350Assign/knight.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/knight.h
 stdlib.h
 -
 stdio.h
 -
 
-/Users/michael/CLionProjects/CS350Assign/main.c
+C:/Users/Syndikit/CLionProjects/CS350Assign/main.c
 stdio.h
 -
 math.h
@@ -24,13 +24,13 @@ math.h
 stdlib.h
 -
 knight.h
-/Users/michael/CLionProjects/CS350Assign/knight.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/knight.h
 temperature.h
-/Users/michael/CLionProjects/CS350Assign/temperature.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/temperature.h
 gcd.h
-/Users/michael/CLionProjects/CS350Assign/gcd.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/gcd.h
 
-/Users/michael/CLionProjects/CS350Assign/temperature.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/temperature.h
 stdio.h
 -
 

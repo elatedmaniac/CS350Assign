@@ -8,15 +8,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int max_moves = 64;
+#define max_moves 64
+/*
+ * Global variables for the board to be printed from the display board method,
+ * total number of moves taken, int-boolean can_move indicates whether a move is possible,
+ * and the current x and y position of the knight.
+ */
 int board[8][8]={0};
 int moves_taken = 0;
 int can_move = 1;
 int curr_x,curr_y = 0;
 
+/*
+ * All posible x-y combinations of knight moves on the chessboard.
+ */
 int horizontal[8] = {2,1,-1,-2,-2,-1,1,2};
 int vertical[8] = {-1,-2,-2,-1,1,2,2,1};
 
+// Initial accessiblity matrix
 int access_matrix[8][8] = {
         {2,3,4,4,4,4,3,2},
         {3,4,6,6,6,6,4,3},
@@ -28,10 +37,11 @@ int access_matrix[8][8] = {
         {2,3,4,4,4,4,3,2}
 };
 
+// prototype of the display_board method.
 void display_board(int sboard[8][8]);
 
 int * possible_moves(){
-    int valid[8] = {9,9,9,9,9,9,9,9};
+    static int valid[8];
     int arr_counter = 0;
     for (int i =0;i<8;i++){
         int x = horizontal[i]+curr_x;
@@ -50,10 +60,10 @@ int * possible_moves(){
 
 }
 
-int * best_move(int opt[8]){
+int * best_move(int opt[]){
     // For-loop counter, current best move, and possible moves array
     int i;
-    int best[2] = {0,0};
+    static int best[2] = {0,0};
     int acc_num = 9;
 
     // Iterates through possible options and compares value in accessibility matrix
@@ -93,22 +103,23 @@ void knight_move(int row,int col){
 
 }
 
+/*
+ * Calls all of the previous methods and uses loops to continue moving the knight until no moves left.
+ */
 void solve(){
     // Displays the blank board and accessibility matrix
+    static int mv[2];
+    static int options[8];
     display_board(board);
     display_board(access_matrix);
-    //knight_move(3,4);
-    //knight_move(3,7);
-    //printf(can_move ? "true":"false");
-    //display_board(board);
-    int *options = possible_moves();
-    int *mv = best_move(options);
-    printf("%d\n%d\n",options[0],mv[0]);
-    /*while (can_move==1){
 
-        knight_move(mv[0],mv[1]);
-    }*/
-    //display_board(board);
+    //printf("%d\n%d\n",options[0],mv[0]);
+    while (can_move==1){
+        options[8] = possible_moves();
+        mv[2] = best_move(options);
+        knight_move(mv[1],mv[0]);
+    }
+    display_board(board);
 }
 
 
