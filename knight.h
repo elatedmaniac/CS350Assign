@@ -14,18 +14,27 @@
  * total number of moves taken, int-boolean can_move indicates whether a move is possible,
  * and the current x and y position of the knight.
  */
-int board[8][8]={0};
-int moves_taken = 0;
-int can_move = 1;
+int board[8][8]={
+        {1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1}
+};
+int moves_taken = 2;
 int curr_x,curr_y = 0;
 
+
 /*
- * All posible x-y combinations of knight moves on the chessboard.
+ * All possible x-y combinations of knight moves on the chessboard.
  */
 int horizontal[8] = {2,1,-1,-2,-2,-1,1,2};
 int vertical[8] = {-1,-2,-2,-1,1,2,2,1};
 
-// Initial accessiblity matrix
+// Initial accessibility matrix
 int access_matrix[8][8] = {
         {2,3,4,4,4,4,3,2},
         {3,4,6,6,6,6,4,3},
@@ -40,7 +49,7 @@ int access_matrix[8][8] = {
 // prototype of the display_board method.
 void display_board(int sboard[8][8]);
 
-int * possible_moves(){
+/*int * possible_moves(){
     static int valid[8];
     int arr_counter = 0;
     for (int i =0;i<8;i++){
@@ -58,9 +67,37 @@ int * possible_moves(){
     }
     return valid;
 
+}*/
+
+/*
+int getx(){
+    for (int i =0;i<8;i++){
+        int x = horizontal[i]+curr_x;
+        if (x<0 || x>8){
+            break;
+        }else{
+            return x;
+        }
+    }
+
 }
 
-int * best_move(int opt[]){
+int gety(){
+    //
+    for (int i =0;i<8;i++){
+        // Gets me an x candidate
+        int y = vertical[i]+curr_x;
+        if (y<0 || y>8){
+            break;
+        }else{
+            return y;
+        }
+    }
+
+}
+*/
+
+/*int * best_move(int opt[]){
     // For-loop counter, current best move, and possible moves array
     int i;
     static int best[2] = {0,0};
@@ -78,7 +115,7 @@ int * best_move(int opt[]){
     return best;
 
 
-}
+}*/
 
 // Iterates through 2-D array of chessboard and prints to console.
 void display_board(int sboard[8][8]){
@@ -94,12 +131,11 @@ void display_board(int sboard[8][8]){
 
 // Takes care of marking knight movement, updating current x and y,
 // and incrementing move counter
-void knight_move(int row,int col){
-
-    curr_x = row;
+void knight_move(int row,int col, int move){
+    board[row][col]=move;
     curr_y = col;
-    board[row][col]=moves_taken;
-    moves_taken += 1;
+    curr_x = row;
+
 
 }
 
@@ -107,19 +143,33 @@ void knight_move(int row,int col){
  * Calls all of the previous methods and uses loops to continue moving the knight until no moves left.
  */
 void solve(){
-    // Displays the blank board and accessibility matrix
-    static int mv[2];
-    static int options[8];
-    display_board(board);
-    display_board(access_matrix);
-
     //printf("%d\n%d\n",options[0],mv[0]);
-    while (can_move==1){
-        options[8] = possible_moves();
-        mv[2] = best_move(options);
-        knight_move(mv[1],mv[0]);
+   while (moves_taken<=64){
+       int newx, newy;
+       //int ascore = 0;
+       int i;
+       for (i=0;i<8;i++) {
+           int y = horizontal[i]+curr_y;
+           int x = vertical[i]+curr_x;
+           if(x>=0 && y>=0 && x<=7 && y<=7){
+               if(board[x][y] == -1) {
+                   newx = x;
+                   newy=y;
+               }
+           }
+       }
+       printf("Move # %d\tNew X = %d\tNew Y = %d\n",moves_taken,newx,newy);
+       knight_move(newx, newy, moves_taken);
+       moves_taken += 1;
     }
     display_board(board);
+}
+
+void results(){
+    // Displays the blank board and accessibility matrix
+    display_board(board);
+    display_board(access_matrix);
+    solve();
 }
 
 

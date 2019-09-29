@@ -37,8 +37,5 @@ void triples(){
     //gcd_recurs(2,4);
     //gcd_recurs(13,52);
     //gcd_recurs(1,4);
-    solve();
-
-
-
+    results();
 }
