@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 
 #define max_moves 64
 /*
@@ -138,23 +139,39 @@ void knight_move(int row,int col, int move){
 
 
 }
+int rand_choice(){
+    srand(time(0));
+    int limit = RAND_MAX - (RAND_MAX/10);
+    int r = rand();
+    while(r>=limit);
 
+    return r%10;
+}
 /*
  * Calls all of the previous methods and uses loops to continue moving the knight until no moves left.
  */
 void solve(){
-    //printf("%d\n%d\n",options[0],mv[0]);
    while (moves_taken<=64){
        int newx, newy;
-       //int ascore = 0;
+       int ascore = 9;
        int i;
        for (i=0;i<8;i++) {
            int y = horizontal[i]+curr_y;
            int x = vertical[i]+curr_x;
            if(x>=0 && y>=0 && x<=7 && y<=7){
                if(board[x][y] == -1) {
-                   newx = x;
-                   newy=y;
+                   if(access_matrix[x][y]<ascore){
+                       newx = x;
+                       newy=y;
+                   }
+                   else if(access_matrix[x][y]==ascore){
+                       int ran = rand_choice();
+                       if(ran>=5){
+                           newx = x;
+                           newy=y;
+                       }
+                   }
+
                }
            }
        }
@@ -162,14 +179,17 @@ void solve(){
        knight_move(newx, newy, moves_taken);
        moves_taken += 1;
     }
-    display_board(board);
+
 }
+
+
 
 void results(){
     // Displays the blank board and accessibility matrix
     display_board(board);
     display_board(access_matrix);
     solve();
+    display_board(board);
 }
 
 

@@ -12,14 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/throwaway.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knight.h" beforeDir="false" afterPath="$PROJECT_DIR$/knight.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
@@ -108,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569712253638</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Printing and making 36/64 moves.">
+      <created>1569737558755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1569737558755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Refactored into temperature and knight header files" />
     <MESSAGE value="Comments added and fixed array return." />
-    <option name="LAST_COMMIT_MESSAGE" value="Comments added and fixed array return." />
+    <MESSAGE value="Printing and making 36/64 moves." />
+    <option name="LAST_COMMIT_MESSAGE" value="Printing and making 36/64 moves." />
   </component>
 </project>
