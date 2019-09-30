@@ -8,15 +8,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-
-#define max_moves 64
 /*
  * Global variables for the board to be printed from the display board method,
  * total number of moves taken, int-boolean can_move indicates whether a move is possible,
  * and the current x and y position of the knight.
  */
 int board[8][8]={
-        {1,-1,-1,-1,-1,-1,-1,-1},
+        {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1},
@@ -25,9 +23,6 @@ int board[8][8]={
         {-1,-1,-1,-1,-1,-1,-1,-1},
         {-1,-1,-1,-1,-1,-1,-1,-1}
 };
-int moves_taken = 2;
-int curr_x,curr_y = 0;
-
 
 /*
  * All possible x-y combinations of knight moves on the chessboard.
@@ -49,74 +44,26 @@ int access_matrix[8][8] = {
 
 // prototype of the display_board method.
 void display_board(int sboard[8][8]);
+// prototype of the validity check for a calculated possible move
+int valid_check(int,int,int final[8][8]);
 
-/*int * possible_moves(){
-    static int valid[8];
-    int arr_counter = 0;
-    for (int i =0;i<8;i++){
-        int x = horizontal[i]+curr_x;
-        int y = vertical[i]+curr_y;
-        if (x<0 || y<0){
-            continue;
-        }else{
-            valid[arr_counter]=i;
-            arr_counter += 1;
-        }
+// Takes in x-y coordinates to ensure they are within the board and cross-checks with the availability of the space.
+int valid_check(int xchk, int ychk, int final[8][8]){
+    if (xchk>=0 && ychk>=0 && xchk<=7 && ychk<=7&&final[xchk][ychk]==-1){
+        return 1;
     }
-    if (valid[0] == 9 || moves_taken==max_moves-1){
-        can_move = 0;
-    }
-    return valid;
-
-}*/
-
-/*
-int getx(){
-    for (int i =0;i<8;i++){
-        int x = horizontal[i]+curr_x;
-        if (x<0 || x>8){
-            break;
-        }else{
-            return x;
-        }
-    }
-
+    return 0;
 }
 
-int gety(){
-    //
-    for (int i =0;i<8;i++){
-        // Gets me an x candidate
-        int y = vertical[i]+curr_x;
-        if (y<0 || y>8){
-            break;
-        }else{
-            return y;
-        }
-    }
+// Produces randomly generated number 0 through 10 using current time since 1970 in seconds as the seed
+int rand_choice(){
+    srand(time(0));
+    int limit = RAND_MAX - (RAND_MAX/10);
+    int r = rand();
+    while(r>=limit);
 
+    return r%10;
 }
-*/
-
-/*int * best_move(int opt[]){
-    // For-loop counter, current best move, and possible moves array
-    int i;
-    static int best[2] = {0,0};
-    int acc_num = 9;
-
-    // Iterates through possible options and compares value in accessibility matrix
-    for (i=0;i<8;i++){
-        if (acc_num>opt[i]){
-            acc_num = opt[i];
-            best[0] = horizontal[acc_num];
-            best[1] = vertical[acc_num];
-        }
-
-    }
-    return best;
-
-
-}*/
 
 // Iterates through 2-D array of chessboard and prints to console.
 void display_board(int sboard[8][8]){
@@ -130,66 +77,49 @@ void display_board(int sboard[8][8]){
     printf("\n");
 }
 
-// Takes care of marking knight movement, updating current x and y,
-// and incrementing move counter
-void knight_move(int row,int col, int move){
-    board[row][col]=move;
-    curr_y = col;
-    curr_x = row;
-
-
-}
-int rand_choice(){
-    srand(time(0));
-    int limit = RAND_MAX - (RAND_MAX/10);
-    int r = rand();
-    while(r>=limit);
-
-    return r%10;
-}
 /*
  * Calls all of the previous methods and uses loops to continue moving the knight until no moves left.
  */
-void solve(){
-   while (moves_taken<=64){
-       int newx, newy;
-       int ascore = 9;
+int solve(int sx, int sy, int final[8][8], int count){
+    if (count == 64){
+        return 1;
+    }
        int i;
        for (i=0;i<8;i++) {
-           int y = horizontal[i]+curr_y;
-           int x = vertical[i]+curr_x;
-           if(x>=0 && y>=0 && x<=7 && y<=7){
-               if(board[x][y] == -1) {
-                   if(access_matrix[x][y]<ascore){
-                       newx = x;
-                       newy=y;
-                   }
-                   else if(access_matrix[x][y]==ascore){
-                       int ran = rand_choice();
-                       if(ran>=5){
-                           newx = x;
-                           newy=y;
-                       }
-                   }
-
+           // Gets the next x-y coordinates and checks them for validity/ availability
+           int x = sx + horizontal[i];
+           int y = sy + vertical[i];
+           if(valid_check(x,y,final)){
+               // Move is good --> current move number replaces -1 in the solution matrix; move count incremented
+               final[x][y] = count;
+               count += 1;
+               // Recursively calls the function to go down the full path.
+               if(solve(x,y,final,count))
+                   return 1;
+                // If the path leads down a blind alley, backtrack at the point of zero moves; decrement count.
+               else{
+                   final[x][y] = -1;
+                   count -= 1;
                }
            }
-       }
-       printf("Move # %d\tNew X = %d\tNew Y = %d\n",moves_taken,newx,newy);
-       knight_move(newx, newy, moves_taken);
-       moves_taken += 1;
     }
+       return 0;
 
 }
 
-
-
-void results(){
+int results(){
     // Displays the blank board and accessibility matrix
+    printf("Starting Chessboard:\n");
     display_board(board);
+    printf("Accessibility Matrix:\n");
     display_board(access_matrix);
-    solve();
-    display_board(board);
+    board[0][0]=0;
+    if(solve(0,0,board,1)){
+        printf("Final Chessboard:\n");
+        display_board(board);
+        return 1;
+    }
+    return 0;
 }
 
 

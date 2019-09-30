@@ -13,12 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/knight.h" beforeDir="false" afterPath="$PROJECT_DIR$/knight.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +31,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1RWW3eLfVjLwVULAUyFL5GlM7dM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -89,6 +88,7 @@
       <workItem from="1569182242261" duration="9036000" />
       <workItem from="1569270384876" duration="1042000" />
       <workItem from="1569297974098" duration="13079000" />
+      <workItem from="1569783138147" duration="7108000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569737558755</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added random choice method">
+      <created>1569739073246</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1569739073246</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +129,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -132,6 +141,7 @@
     <MESSAGE value="Refactored into temperature and knight header files" />
     <MESSAGE value="Comments added and fixed array return." />
     <MESSAGE value="Printing and making 36/64 moves." />
-    <option name="LAST_COMMIT_MESSAGE" value="Printing and making 36/64 moves." />
+    <MESSAGE value="Added random choice method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added random choice method" />
   </component>
 </project>
