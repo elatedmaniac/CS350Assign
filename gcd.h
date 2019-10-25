@@ -48,7 +48,7 @@ int gcd_recurs(int num1, int num2){
 
     if (least==0){
         gcf = big;
-        printf("The GCF is: %d\n",gcf);
+        printf("The GCD is: %d\n",gcf);
         return gcf;
     }
     else{

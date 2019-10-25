@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Syndikit/CLionProjects/CS350Assign/main.c" "C:/Users/Syndikit/CLionProjects/CS350Assign/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj"
+  "C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c" "C:/Users/Syndikit/CLionProjects/CS350Assign/cmake-build-debug/CMakeFiles/CS350Assign.dir/minidb.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
