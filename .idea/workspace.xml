@@ -12,14 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assign1calls.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects1.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects1.rsp" afterDir="false" />
@@ -29,9 +29,8 @@
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gcd.h" beforeDir="false" afterPath="$PROJECT_DIR$/gcd.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/throwaway.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +58,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
   </component>
   <component name="RunDashboard">
@@ -107,6 +107,9 @@
       <workItem from="1569806056184" duration="791000" />
       <workItem from="1570403222827" duration="2000" />
       <workItem from="1571940668182" duration="3335000" />
+      <workItem from="1571988884044" duration="48000" />
+      <workItem from="1572020497725" duration="8363000" />
+      <workItem from="1572039098704" duration="3079000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -143,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1569803030782</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Started minidb and formed struct.">
+      <created>1571988914944</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571988914944</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +178,7 @@
     <MESSAGE value="Printing and making 36/64 moves." />
     <MESSAGE value="Added random choice method" />
     <MESSAGE value="Finished Knight's Tour Problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished Knight's Tour Problem" />
+    <MESSAGE value="Started minidb and formed struct." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started minidb and formed struct." />
   </component>
 </project>

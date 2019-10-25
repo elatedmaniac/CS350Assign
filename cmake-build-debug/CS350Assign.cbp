@@ -86,9 +86,6 @@
 		<Unit filename="C:/Users/Syndikit/CLionProjects/CS350Assign/main.c">
 			<Option target="CS350Assign"/>
 		</Unit>
-		<Unit filename="C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c">
-			<Option target="CS350Assign"/>
-		</Unit>
 		<Unit filename="C:/Users/Syndikit/CLionProjects/CS350Assign/temperature.h">
 			<Option target="CS350Assign"/>
 		</Unit>

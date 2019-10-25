@@ -149,33 +149,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\CS350Assign.dir\build.make CMakeFiles/CS350Assign.dir/main.c.s
 .PHONY : main.c.s
 
-minidb.obj: minidb.c.obj
-
-.PHONY : minidb.obj
-
-# target to build an object file
-minidb.c.obj:
-	$(MAKE) -f CMakeFiles\CS350Assign.dir\build.make CMakeFiles/CS350Assign.dir/minidb.c.obj
-.PHONY : minidb.c.obj
-
-minidb.i: minidb.c.i
-
-.PHONY : minidb.i
-
-# target to preprocess a source file
-minidb.c.i:
-	$(MAKE) -f CMakeFiles\CS350Assign.dir\build.make CMakeFiles/CS350Assign.dir/minidb.c.i
-.PHONY : minidb.c.i
-
-minidb.s: minidb.c.s
-
-.PHONY : minidb.s
-
-# target to generate assembly for a file
-minidb.c.s:
-	$(MAKE) -f CMakeFiles\CS350Assign.dir\build.make CMakeFiles/CS350Assign.dir/minidb.c.s
-.PHONY : minidb.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -188,9 +161,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... minidb.obj
-	@echo ... minidb.i
-	@echo ... minidb.s
 .PHONY : help
 
 

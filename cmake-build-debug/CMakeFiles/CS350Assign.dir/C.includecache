@@ -6,31 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Syndikit/CLionProjects/CS350Assign/gcd.h
-stdio.h
--
-
-C:/Users/Syndikit/CLionProjects/CS350Assign/knight.h
-stdlib.h
--
-stdio.h
--
-time.h
--
-
 C:/Users/Syndikit/CLionProjects/CS350Assign/main.c
 stdio.h
 -
-math.h
--
-knight.h
-C:/Users/Syndikit/CLionProjects/CS350Assign/knight.h
-temperature.h
-C:/Users/Syndikit/CLionProjects/CS350Assign/temperature.h
-gcd.h
-C:/Users/Syndikit/CLionProjects/CS350Assign/gcd.h
+minidb.c
+C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c
 
-C:/Users/Syndikit/CLionProjects/CS350Assign/temperature.h
+C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c
 stdio.h
+-
+string.h
+-
+stdlib.h
+-
+conio.h
 -
 
