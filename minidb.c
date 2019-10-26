@@ -10,7 +10,7 @@ char options[9][40] = {"1 Initialize the database", "2 Input new records","3 Sea
                        "5 List all the records", "6 List all records (sorted form)", "7 Save database", "8 Load an existing database", "9 Exit"};
 FILE *output;
 FILE *input;
-char fname[20] = "database.bat";
+char fname[] = "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\database";
 
 typedef struct {
     int rec_num;
@@ -27,18 +27,25 @@ void print_head();
 void dbdemo();
 
 void initializeDB(){
-    output = fopen(fname,"wb");
-
-    int i;
-    for(i=0;i<100; i++){
-        Record r;
+    Record r;
+    for(int i=0;i<100; i++){
         r.rec_num= i;
         strcpy(r.toolName , "NULL");
         r.quantity = 0;
         r.cost = 0.0;
-        fwrite(&r, sizeof(r),1, output);
+        db[i]=r;
+
+    }
+    output = fopen(fname,"wb");
+    for(int i = 0; i< 100; i++){
+        if(output != NULL){
+
+            fwrite(&db[i], sizeof(r),1, output);
+        }
+
     }
     fclose(output);
+
 }
 
 void print_head(){
@@ -51,8 +58,9 @@ void print_head(){
         exit (1);
     }
     printf("Record\tTool Name\tQuantity\tCost\n");
-    fread(&rin, sizeof(rin),1,input);
+
     for(i=0;i<5;i++){
+        fread(&rin, sizeof(rin),1,input);
         printf("%d\t%s\t%d\t%f\n", rin.rec_num,rin.toolName,rin.quantity,rin.cost);
     }
     fclose(input);
