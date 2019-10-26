@@ -27,7 +27,7 @@ typedef struct {
     double cost;
 }Record;
 
-Record db[100];
+Record db[1000];
 
 // Function prototypes
 int getSelection();
@@ -95,6 +95,14 @@ void print_head(){
 }
 
 void add(){
+    Record new_r;
+    new_r.rec_num = num_entries;
+    printf("Enter the name of the tool:\n");
+    scanf("%s",&new_r.toolName);
+    printf("Enter the quantity:\n");
+    scanf("%d", &new_r.quantity);
+    printf("Enter the cost:\n");
+    scanf("%f",&new_r.cost);
 
 }
 
@@ -127,6 +135,8 @@ void sorted_list(){
 
 }
 
+void save();
+
 void load(){
 
 }
@@ -154,15 +164,13 @@ void dbdemo(){
         case 5:
             list_entries();
         case 6:
-            list_entries();
-        case 7:
             sorted_list();
+        case 7:
+            save();
         case 8:
             load();
         case 9:
             exitdb();
     }
-    initializeDB();
-    //print_head();
-    //add();
+
 }
