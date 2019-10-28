@@ -155,11 +155,13 @@ int getnum(FILE *fp)
 		c = getc(fp);
 		}
 	    }
-	else
-	    {
-	    printf("Garbage in ASCII fields\n");
-	    exit(1);
-	    }
+	else{
+        printf("Garbage in ASCII fields\n");
+        exit(1);
+
+	}
+
+
     i=0;
     do
 	{

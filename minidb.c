@@ -24,7 +24,7 @@ typedef struct {
     int rec_num;
     char toolName[100];
     int quantity;
-    double cost;
+    float cost;
 }Record;
 
 Record db[1000];
