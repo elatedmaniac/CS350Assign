@@ -12,8 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/a2_samples/ip03mainSample.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/a2_samples/iplib2New.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/bg448x448.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/imageInfo2019.rar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/trainsta512x512.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/winding252x298.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/photo.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,7 +103,9 @@
       <workItem from="1571988884044" duration="48000" />
       <workItem from="1572020497725" duration="8363000" />
       <workItem from="1572039098704" duration="5159000" />
-      <workItem from="1572044642387" duration="8141000" />
+      <workItem from="1572044642387" duration="8166000" />
+      <workItem from="1572211547634" duration="2220000" />
+      <workItem from="1572220809529" duration="1440000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -161,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572065820428</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="refine">
+      <created>1572072625566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1572072625566</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +207,7 @@
     <MESSAGE value="added initialize and head methods to minidb" />
     <MESSAGE value="Fixed head and initialize methods" />
     <MESSAGE value="switch in dbdemo and prototyped other methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="switch in dbdemo and prototyped other methods" />
+    <MESSAGE value="refine" />
+    <option name="LAST_COMMIT_MESSAGE" value="refine" />
   </component>
 </project>
