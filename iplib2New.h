@@ -1,4 +1,11 @@
-/*************************************************************************** 
+//
+// Created by Michael Austin on 10/29/19.
+//
+
+#ifndef CS350ASSIGN_IPLIB2NEW_H
+#define CS350ASSIGN_IPLIB2NEW_H
+
+/***************************************************************************
  * File: iplib.c                                                           *
  *                                                                         *
  * Desc: general routines for reading and writing ppm files.               *
@@ -37,7 +44,7 @@ int ROWS, COLS, TYPE;
  ***************************************************************************/
 
 image_ptr read_pnm(char *filename, int *rows, int *cols, int *type)
-    {
+{
     int i;                     /* index variable */
     int row_size;              /* size of image row in bytes */
     int maxval;                /* maximum value of pixel */
@@ -49,80 +56,80 @@ image_ptr read_pnm(char *filename, int *rows, int *cols, int *type)
     unsigned long total_bytes; /* number of total bytes written to file */
     float scale;               /* number of bytes per pixel */
 
- 
+
     /* open input file */
-     if((fp = fopen(filename, "rb")) == NULL)
-	{
-	printf("Unable to open %s for reading\n",filename);
-	exit(1);
-	}
+    if((fp = fopen(filename, "rb")) == NULL)
+    {
+        printf("Unable to open %s for reading\n",filename);
+        exit(1);
+    }
 
     firstchar = getc(fp);
     secchar = getc(fp);
-    printf("second char %d \n", secchar); 
-    
+    printf("second char %d \n", secchar);
+
     if(firstchar != 'P')
-	{
-	printf("Sorry... This is not a PPM file!\n");
-	exit(1);
-	}
+    {
+        printf("Sorry... This is not a PPM file!\n");
+        exit(1);
+    }
 
 
-     *cols = getnum(fp);
-     *rows = getnum(fp);
-     *type = secchar - '0';
-    
-    ROWS = *rows; COLS = *cols; TYPE = *type; 
- 
+    *cols = getnum(fp);
+    *rows = getnum(fp);
+    *type = secchar - '0';
+
+    ROWS = *rows; COLS = *cols; TYPE = *type;
+
     switch(secchar)
-	{
-	case '4':            /* PBM */
-	    scale = 0.125;
-	    maxval = 1;
-	    break;
-	case '5':            /* PGM */
-	    scale = 1.0;
-	    maxval = getnum(fp);
-	    break;
-	case '6':             /* PPM */
-	    scale = 3.0;
-	    maxval = getnum(fp);
-	    break;
-	default :             /* Error */
-	    printf("read_pnm: This is not a Portable bitmap RAWBITS file\n");
-	    exit(1);
-	    break;
-	}
-    
+    {
+        case '4':            /* PBM */
+            scale = 0.125;
+            maxval = 1;
+            break;
+        case '5':            /* PGM */
+            scale = 1.0;
+            maxval = getnum(fp);
+            break;
+        case '6':             /* PPM */
+            scale = 3.0;
+            maxval = getnum(fp);
+            break;
+        default :             /* Error */
+            printf("read_pnm: This is not a Portable bitmap RAWBITS file\n");
+            exit(1);
+            break;
+    }
+
     row_size = (*cols) * scale;
     total_size = (unsigned long) (*rows) * row_size;
 
     ptr = (image_ptr) malloc(total_size);
 
     if(ptr == NULL)
-	{
-	printf("Unable to malloc %lu bytes\n",total_size);
-	exit(1);
-	}
+    {
+        printf("Unable to malloc %lu bytes\n",total_size);
+        exit(1);
+    }
 
     total_bytes=0;
     offset = 0;
     for(i=0; i<(*rows); i++)
-	{
-	total_bytes+=fread(ptr+offset, 1, row_size, fp);
-	offset += row_size;
-	}
+    {
+        total_bytes+=fread(ptr+offset, 1, row_size, fp);
+        offset += row_size;
+    }
 
     if(total_size != total_bytes)
-	{
-	printf("Failed miserably trying to read %ld bytes\nRead %ld bytes\n",
-		total_size, total_bytes);
-	exit(1);
-	}
+    {
+        printf("Failed miserably trying to read %ld bytes\nRead %ld bytes\n",
+               total_size, total_bytes);
+        exit(1);
+    }
 
     fclose(fp);
     return ptr;
-    }
+}
 
 /***************************************************************************
  * Func: getnum                                                            *
@@ -135,43 +142,43 @@ image_ptr read_pnm(char *filename, int *rows, int *cols, int *type)
  ***************************************************************************/
 
 int getnum(FILE *fp)
-    {
+{
     char c;               /* character read in from file */
     int i;                /* number accumulated and returned */
 
     do
-	{
-	c = getc(fp);
-	}
+    {
+        c = getc(fp);
+    }
     while((c==' ') || (c=='\t') || (c=='\n') || (c=='\r'));
 
     if((c<'0') || (c>'9'))
-	if(c == '#')                   /* chew off comments */
-	    {
-	    while(c == '#')
-		{
-		while(c != '\n')
-		    c = getc(fp);
-		c = getc(fp);
-		}
-	    }
-	else{
-        printf("Garbage in ASCII fields\n");
-        exit(1);
+        if(c == '#')                   /* chew off comments */
+        {
+            while(c == '#')
+            {
+                while(c != '\n')
+                    c = getc(fp);
+                c = getc(fp);
+            }
+        }
+        else{
+            printf("Garbage in ASCII fields\n");
+            exit(1);
 
-	}
+        }
 
 
     i=0;
     do
-	{
-	i=i*10+(c-'0');         /* convert ASCII to int */
-	c = getc(fp);
-	}
-    while((c>='0') && (c<='9'));
-  
-    return i;
+    {
+        i=i*10+(c-'0');         /* convert ASCII to int */
+        c = getc(fp);
     }
+    while((c>='0') && (c<='9'));
+
+    return i;
+}
 
 /***************************************************************************
  * Func: write_pnm                                                         *
@@ -187,9 +194,9 @@ int getnum(FILE *fp)
  * Returns: nothing                                                        *
  ***************************************************************************/
 
-void write_pnm(image_ptr ptr, char *filename, int rows, 
-	       int cols, int magic_number)
-    {
+void write_pnm(image_ptr ptr, char *filename, int rows,
+               int cols, int magic_number)
+{
     FILE *fp;             /* file pointer for output file */
     long offset;          /* current offset into image buffer */
     long total_bytes;     /* number of bytes written to output file */
@@ -199,48 +206,51 @@ void write_pnm(image_ptr ptr, char *filename, int rows,
     float scale;          /* number of bytes per image pixel */
 
     switch(magic_number)
-	{
-	case 4:            /* PBM */
-	    scale = 0.125;
-	    break;
-	case 5:            /* PGM */
-	    scale = 1.0;
-	    break;
-	case 6:             /* PPM */
-	    scale = 3.0;
-	    break;
-	default :             /* Error */
-	    printf("write_pnm: This is not a Portable bitmap RAWBITS file\n");
-	    exit(1);
-	    break;
-	}
+    {
+        case 4:            /* PBM */
+            scale = 0.125;
+            break;
+        case 5:            /* PGM */
+            scale = 1.0;
+            break;
+        case 6:             /* PPM */
+            scale = 3.0;
+            break;
+        default :             /* Error */
+            printf("write_pnm: This is not a Portable bitmap RAWBITS file\n");
+            exit(1);
+            break;
+    }
 
     /* open new output file */
     if((fp=fopen(filename, "wb")) == NULL)
-	{
-	printf("Unable to open %s for output\n",filename);
-	exit(1);
-	}
+    {
+        printf("Unable to open %s for output\n",filename);
+        exit(1);
+    }
 
     /* print out the portable bitmap header */
     fprintf(fp, "P%d\n%d %d\n", magic_number, cols, rows);
     if(magic_number != 4)
-	fprintf(fp, "255\n");
+        fprintf(fp, "255\n");
 
     row_size = cols * scale;
     total_size = (long) row_size *rows;
     offset = 0;
     total_bytes = 0;
     for(i=0; i<rows; i++)
-	{
-	total_bytes += fwrite(ptr+offset, 1, row_size, fp);
-	offset += row_size;
-	}
-
-    if(total_bytes != total_size)
-	printf("Tried to write %ld bytes...Only wrote %ld\n",
-		total_size, total_bytes);
-
-    fclose(fp);
+    {
+        total_bytes += fwrite(ptr+offset, 1, row_size, fp);
+        offset += row_size;
     }
 
+    if(total_bytes != total_size)
+        printf("Tried to write %ld bytes...Only wrote %ld\n",
+               total_size, total_bytes);
+
+    fclose(fp);
+}
+
+
+
+#endif //CS350ASSIGN_IPLIB2NEW_H

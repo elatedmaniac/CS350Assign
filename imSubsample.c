@@ -1,7 +1,7 @@
 //
 // Created by Michael Austin on 2019-10-28.
 //
-#include "a2_samples/iplib2New.c"
+#include "iplib2New.h"
 #include <math.h>
 
 // Prototypes
@@ -11,11 +11,11 @@ float stdev(int, int val[]);
 
 float mean(int n, int val[]){
     int i;
-    int total = 0;
+    float total = 0;
     float mean;
     for(i=0; i<n;i++){
 
-        total += val[i];
+        total += (float) val[i];
     }
     mean = total/n;
     return mean;

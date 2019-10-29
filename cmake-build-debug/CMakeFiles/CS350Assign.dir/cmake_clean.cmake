@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CS350Assign.dir/main.c.o"
-  "CS350Assign.pdb"
   "CS350Assign"
+  "CS350Assign.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

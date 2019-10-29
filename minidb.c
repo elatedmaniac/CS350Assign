@@ -98,7 +98,7 @@ void add(){
     Record new_r;
     new_r.rec_num = num_entries;
     printf("Enter the name of the tool:\n");
-    scanf("%s",&new_r.toolName);
+    scanf("%s",new_r.toolName);
     printf("Enter the quantity:\n");
     scanf("%d", &new_r.quantity);
     printf("Enter the cost:\n");
@@ -130,12 +130,37 @@ void list_entries(){
     fclose(input);
     dbdemo();
 }
-
+/*
+ * Sorting by name, by quantity, or by cost (dependent on user choice)
+ */
 void sorted_list(){
+    char opt;
+    printf("Please select \'n\' or \'q\' or \'c\' to sort by name, quantity, or cost, respectively.");
+    scanf(" %c", &opt);
+
+    if(opt=='n'){
+        printf("Good");
+
+
+    }
+    else if(opt=='q'){
+        printf("Good");
+
+    }
+    else if(opt=='c'){
+        printf("Good");
+
+
+    }else{
+        printf("Error: %c is not a valid option.\nSelect \'n\' or \'q\' or \'c\'.\n", opt);
+    }
+    getSelection();
 
 }
 
-void save();
+void save(){
+
+};
 
 void load(){
 
@@ -155,22 +180,32 @@ void dbdemo(){
     switch (select){
         case 1:
             initializeDB();
+            break;
         case 2:
             add();
+            break;
         case 3:
             search();
+            break;
         case 4:
             delete();
+            break;
         case 5:
             list_entries();
+            break;
         case 6:
             sorted_list();
+            printf("Success!\n");
+            break;
         case 7:
             save();
+            break;
         case 8:
             load();
+            break;
         case 9:
             exitdb();
+            break;
     }
 
 }

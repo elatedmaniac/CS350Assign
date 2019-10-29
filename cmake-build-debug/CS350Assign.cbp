@@ -37,6 +37,46 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="main.c">
+				<Option output="/Users/michael/Desktop/CS350Assign/cmake-build-debug/main.c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/michael/Desktop/CS350Assign/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 main.c"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="main.c/fast">
+				<Option output="/Users/michael/Desktop/CS350Assign/cmake-build-debug/main.c" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/michael/Desktop/CS350Assign/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 main.c/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/michael/Desktop/CS350Assign/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="CS350Assign">
 				<Option output="/Users/michael/Desktop/CS350Assign/cmake-build-debug/CS350Assign" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/Users/michael/Desktop/CS350Assign/cmake-build-debug"/>
@@ -78,20 +118,17 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/michael/Desktop/CS350Assign/assignment_1/assign1calls.h">
-			<Option target="CS350Assign"/>
+		<Unit filename="/Users/michael/Desktop/CS350Assign/imSubsample.c">
+			<Option target="main.c"/>
 		</Unit>
-		<Unit filename="/Users/michael/Desktop/CS350Assign/assignment_1/gcd.h">
-			<Option target="CS350Assign"/>
-		</Unit>
-		<Unit filename="/Users/michael/Desktop/CS350Assign/assignment_1/knight.h">
-			<Option target="CS350Assign"/>
-		</Unit>
-		<Unit filename="/Users/michael/Desktop/CS350Assign/assignment_1/temperature.h">
-			<Option target="CS350Assign"/>
+		<Unit filename="/Users/michael/Desktop/CS350Assign/iplib2New.h">
+			<Option target="main.c"/>
 		</Unit>
 		<Unit filename="/Users/michael/Desktop/CS350Assign/main.c">
 			<Option target="CS350Assign"/>
+		</Unit>
+		<Unit filename="/Users/michael/Desktop/CS350Assign/minidb.c">
+			<Option target="main.c"/>
 		</Unit>
 		<Unit filename="/Users/michael/Desktop/CS350Assign/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

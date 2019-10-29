@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include "minidb.c"
 #include "imSubsample.c"
+#include "iplib2New.h"
 
 
-int validate_in(int redfactor, int dim);
+int validate_in(int, int);
 
 int validate_in(int redfactor, int dim) {
     if(dim%redfactor!= 0){
@@ -13,11 +14,14 @@ int validate_in(int redfactor, int dim) {
     }
 }
 
-int main(int argc, char **argv) {
+int main() {
 
-    dbdemo();
+    //dbdemo();
+    int test[5] = {1,5,7,9,10};
+    //validate_in((int)argv[3], 2);
+    float out = mean(5,test);
 
-    validate_in((int)argv[3], 2);
+    printf("Test mean: %f",out);
 
     return 0;
 
