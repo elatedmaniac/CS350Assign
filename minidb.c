@@ -32,7 +32,7 @@ Record db[1000];
 // Function prototypes
 int getSelection();
 void initializeDB();
-void search();
+void search(char);
 void delete();
 void print_head();
 void list_entries();
@@ -105,8 +105,26 @@ void add(){
     scanf("%f",&new_r.cost);
 
 }
-
-void search(){
+/*
+ * Provides functionality for searching based on record number and tool name.
+ */
+void search(char arg){
+    char opt;
+    printf("To search by tool ID, enter \'i\'.\nTo search by tool name, enter \'n\'.\n");
+    scanf(" %c", &opt);
+    if(opt != 'i' && opt != 'n'){
+        printf("Error: that option is not available.");
+        exit(1);
+    }
+    if(opt == 'i'){
+        int num = (int) opt;
+        printf("%d\\t%s\\t%d\\t%f\\n", db[num].rec_num,db[num].toolName,db[num].quantity,db[num].cost);
+    }
+    if(opt == 'n'){
+        char *tname[];
+        printf("What is the name of the tool?\n");
+        scanf()
+    }
 
 }
 

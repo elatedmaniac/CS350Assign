@@ -17,11 +17,11 @@ int validate_in(int redfactor, int dim) {
 int main() {
 
     //dbdemo();
-    int test[5] = {1,5,7,9,10};
+    //int test[5] = {1,5,7,9,10};
     //validate_in((int)argv[3], 2);
-    float out = mean(5,test);
+    //float out = stdev(5,test);
 
-    printf("Test mean: %f",out);
+    //printf("Test std dev: %f",out);
 
     return 0;
 

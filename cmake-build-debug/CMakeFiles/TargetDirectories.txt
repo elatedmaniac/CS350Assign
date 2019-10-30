@@ -1,3 +1,4 @@
 /Users/michael/Desktop/CS350Assign/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/michael/Desktop/CS350Assign/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/michael/Desktop/CS350Assign/cmake-build-debug/CMakeFiles/main.c.dir
 /Users/michael/Desktop/CS350Assign/cmake-build-debug/CMakeFiles/CS350Assign.dir
