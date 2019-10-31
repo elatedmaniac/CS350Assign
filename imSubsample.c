@@ -15,7 +15,7 @@ image_ptr resize(image_ptr *, int); // Method for performing reduction
 
 unsigned char mean(unsigned char n, unsigned char val[]){
     int i;
-    int total = 0;
+    unsigned char total = 0;
     unsigned char mean;
     for(i=0; i<n;i++){
 
@@ -41,7 +41,6 @@ float stdev(int n, unsigned char vals[]){
 
     return sqrtf((diff/(n-1)));
 }
-
 
 
 

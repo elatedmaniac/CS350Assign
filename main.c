@@ -25,49 +25,40 @@ int validate_in(int redfactor, int dim) {
 
 int main(int argc, char **argv) {
     int rows, cols, type;
-    //dbdemo();
-    //int test[5] = {1,5,7,9,10};
-    //validate_in((int)argv[3], 2);
-    //float out = stdev(5,test);
-
-    //printf("Test std dev: %f",out);
-    printf("reading input image ... \n");
+    dbdemo();
+    //int test[5] = {16,8,13,9,10};
+    //printf("reading input image ... \n");
 
     //imagePtr = read_pnm(argv[1], &rows, &cols, &type);
-    imagePtr = read_pnm(f, &rows, &cols, &type);
-    /*
-     * if (!validate_in((int)argv[4],rows)){
-        printf("Invalid reduction factor!\n");
-        exit(1);
-    }
-     */
+    /*imagePtr = read_pnm(f, &rows, &cols, &type);
 
-    int i, j, n, s;
-    s = 2;
-    n = rows/s;
+    int i, j, n, s, s1, s2;
+    n = 2;
+    s = rows/n;
 
-    int blocks[s*s];
     printf("image read successfully \n");
     printf("rows=%d, cols=%d, type=%d \n", rows, cols, type);
 
-    for (int k = 0; k < s*s; k++) {
-        unsigned char subsample[n][n];
-        for (i=0; i< n; i++){
-            for (j=0; j< n; j++)
-            {
-                subsample[i][j]=imagePtr[i*cols + j];
+    unsigned char test_out[s][s];
+    unsigned char block[n];
+    for(i=0;i<s;i++){
+        for(j=0;j<s;j++){
+            for(s1=0;s1<rows;s1+n){
+                for(s2=0;s2<cols;s2+n){
+                    block[s2] = imagePtr[s1*cols +s2];
+                }
             }
-
-
+            test_out[i][j] = mean(n*n,block);
         }
-        blocks[k] = mean(n,subsample);
     }
 
-    image_ptr output_image = (image_ptr) blocks;
+
+
+    image_ptr output_image = (image_ptr) test_out;
 
     printf("\n Now writing to image file ... \n");
     write_pnm(output_image,o,n,n,type);
-    //write_pnm(output_image,argv[3],n,n,type);
+    //write_pnm(output_image,argv[3],n,n,type);*/
     return 0;
 
 }

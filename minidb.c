@@ -8,13 +8,13 @@
 // Constants and utilities
 char options[9][40] = {"1 Initialize the database", "2 Input new records","3 Search for a record", "4 Delete a record",
                        "5 List all the records", "6 List all records (sorted form)", "7 Save database", "8 Load an existing database", "9 Exit"};
-char fname[] = "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\database";
+char fname[] = "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\database.dat";
 FILE *output;
 FILE *input;
 
 int num_entries = 0;
-int curr_null = 0;
-int curr_choice;
+int curr_choice =0;
+int curr_rec = 0;
 
 /*
  * Structure for each record. Record Number (int), Tool Name (string), Quantity (int), and Cost (double)
@@ -51,6 +51,7 @@ int getSelection(){
     return curr_choice;
 }
 void initializeDB(){
+    output = fopen(fname,"wb");
     Record r;
     for(int i=0;i<100; i++){
         r.rec_num= i;
@@ -59,17 +60,11 @@ void initializeDB(){
         r.cost = 0.0;
         db[i]=r;
         num_entries += 1;
+        fwrite(&r, sizeof(Record),1,output);
     }
-    output = fopen(fname,"wb");
-    for(int i = 0; i< 100; i++){
-        if(output != NULL){
 
-            fwrite(&db[i], sizeof(r),1, output);
-        }
-
-    }
     fclose(output);
-    getSelection();
+    //getSelection();
 
 }
 /*
@@ -96,13 +91,37 @@ void print_head(){
 
 void add(){
     Record new_r;
-    new_r.rec_num = num_entries;
+
+    //input = fopen(fname,"");
+
     printf("Enter the name of the tool:\n");
-    scanf("%s",new_r.toolName);
+    scanf(" %s",new_r.toolName);
     printf("Enter the quantity:\n");
-    scanf("%d", &new_r.quantity);
+    scanf(" %d", &new_r.quantity);
     printf("Enter the cost:\n");
-    scanf("%f",&new_r.cost);
+    scanf(" %f",&new_r.cost);
+    if(curr_rec>99){
+        new_r.rec_num = num_entries;
+    }else{
+
+        new_r.rec_num = curr_rec;
+
+    }
+    db[curr_rec] = new_r;
+    for(int i=0;i<num_entries;i++){
+        printf("%d\t%s\t%d\t%f\n", db[i].rec_num,db[i].toolName,db[i].quantity,db[i].cost);
+    }
+    num_entries+=1;
+    output = fopen(fname,"wb");
+    for(int i=0;i<num_entries; i++){
+        fwrite(&db[i], sizeof(Record),1,output);
+    }
+
+    fclose(output);
+    curr_rec +=1;
+
+
+
 
 }
 /*
@@ -139,6 +158,25 @@ void search(){
 }
 
 void delete(){
+    int id, i;
+    printf("What is the tool ID of the record you want to delete?\n");
+    scanf(" %d",&id);
+    for(i=(id-1);i<num_entries;i++){
+        db[i] = db[i+1];
+        db[i].rec_num -= 1;
+    }
+    num_entries -= 1;
+    if(id<curr_rec){
+        curr_rec -=1;
+    }
+    output = fopen(fname,"wb");
+    for(int i=0;i<num_entries; i++){
+        fwrite(&db[i], sizeof(Record),1,output);
+    }
+
+    fclose(output);
+
+
 
 }
 
@@ -149,34 +187,80 @@ void list_entries(){
         printf("\nError: No such file exists!\n");
         exit (1);
     }
-    printf("Record\tTool Name\tQuantity\tCost\n");
-
     for(int i=0;i<num_entries;i++){
         fread(&rin, sizeof(rin),1,input);
         printf("%d\t%s\t%d\t%f\n", rin.rec_num,rin.toolName,rin.quantity,rin.cost);
     }
     fclose(input);
-    dbdemo();
+
 }
 /*
  * Sorting by name, by quantity, or by cost (dependent on user choice)
  */
 void sorted_list(){
     char opt;
+    int i,j;
+    Record temp;
     printf("Please select \'n\' or \'q\' or \'c\' to sort by name, quantity, or cost, respectively.");
     scanf(" %c", &opt);
 
     if(opt=='n'){
-        printf("Good");
+        printf("Sorting by name.");
+
+        for(i=1;i<num_entries;i++){
+            for (j = 0; j < num_entries-i; ++j) {
+                if(strcmp(db[j].toolName,db[j+1].toolName)>0 ){
+                    temp = db[j];
+                    db[j] = db[j+1];
+                    db[j+1] = temp;
+                }
+
+            }
+        }
+        for(i=0;i<num_entries;i++){
+            printf("%d\t%s\t%d\t%f\n", db[i].rec_num,db[i].toolName,db[i].quantity,db[i].cost);
+        }
 
 
     }
     else if(opt=='q'){
         printf("Good");
+        printf("Sorting by quantity.");
+
+        for(i=1;i<num_entries;i++){
+            for (j = 0; j < num_entries-i; ++j) {
+                if(db[j].quantity > db[j+1].quantity){
+                    temp = db[j];
+                    db[j] = db[j+1];
+                    db[j+1] = temp;
+                }
+
+            }
+        }
+        for(i=0;i<num_entries;i++){
+            printf("%d\t%s\t%d\t%f\n", db[i].rec_num,db[i].toolName,db[i].quantity,db[i].cost);
+        }
+
 
     }
     else if(opt=='c'){
         printf("Good");
+        printf("Sorting by cost.");
+
+        for(i=1;i<num_entries;i++){
+            for (j = 0; j < num_entries-i; ++j) {
+                if(db[j].cost > db[j+1].cost ){
+                    temp = db[j];
+                    db[j] = db[j+1];
+                    db[j+1] = temp;
+                }
+
+            }
+        }
+        for(i=0;i<num_entries;i++){
+            printf("%d\t%s\t%d\t%f\n", db[i].rec_num,db[i].toolName,db[i].quantity,db[i].cost);
+        }
+
 
 
     }else{
@@ -187,14 +271,34 @@ void sorted_list(){
 }
 
 void save(){
+    Record r;
+    output = fopen(fname,"wb");
+    for(int i = 0; i< 100; i++){
+        if(output != NULL){
+
+            fwrite(&db[i], sizeof(r),1, output);
+        }
+
+    }
+    fclose(output);
 
 };
 
 void load(){
+    Record rec;
+    char filename[40];
+    FILE *fload;
+    scanf(" %s",filename);
+    fload = fopen(filename,"r");
+    while(fscanf(fload,"%d %s %d %f", &rec.rec_num, rec.toolName, &rec.quantity, &rec.cost)!=EOF){
+        db[rec.rec_num] = rec;
+    }
 
 }
 
 void exitdb(){
+    printf("Exiting...\n");
+    exit(0);
 
 }
 
@@ -208,29 +312,29 @@ void dbdemo(){
     switch (select){
         case 1:
             initializeDB();
-            break;
+            dbdemo();
         case 2:
             add();
-            break;
+            dbdemo();
         case 3:
             search();
-            break;
+            dbdemo();
         case 4:
             delete();
-            break;
+            dbdemo();
         case 5:
             list_entries();
-            break;
+            dbdemo();
         case 6:
             sorted_list();
             printf("Success!\n");
-            break;
+            dbdemo();
         case 7:
             save();
-            break;
+            dbdemo();
         case 8:
             load();
-            break;
+            dbdemo();
         case 9:
             exitdb();
             break;
