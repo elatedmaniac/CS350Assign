@@ -6,14 +6,13 @@
 
 
 // Prototypes
-unsigned char mean(unsigned char, unsigned char val[]);
+unsigned char mean(int n,unsigned char val[]);
 float stdev(int, unsigned char val[]);
-image_ptr resize(image_ptr *, int); // Method for performing reduction
 
 
 
 
-unsigned char mean(unsigned char n, unsigned char val[]){
+unsigned char mean(int n, unsigned char val[]){
     int i;
     unsigned char total = 0;
     unsigned char mean;
@@ -25,6 +24,7 @@ unsigned char mean(unsigned char n, unsigned char val[]){
     return mean;
 
 }
+
 /*
  * Computes standard deviation given an array of values and their count.
  * Works in testing. Displays out to 6 decimal places.
@@ -33,8 +33,8 @@ unsigned char mean(unsigned char n, unsigned char val[]){
  */
 float stdev(int n, unsigned char vals[]){
     int i;
-    float diff;
-    unsigned char mn = mean(n,vals);
+    float diff =0;
+    int mn = (int) mean(n,vals);
     for(i=0;i<n;i++){
         diff += pow((vals[i]-mn),2);
     }

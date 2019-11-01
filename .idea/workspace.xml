@@ -13,8 +13,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/CLINE_Out.pgm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/bg448x448.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/bg448x448.pgm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imSubsample.c" beforeDir="false" afterPath="$PROJECT_DIR$/imSubsample.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,6 +59,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Syndikit\CLionProjects\CS350Assign" />
       <recent name="$PROJECT_DIR$/assignment_1" />
     </key>
   </component>
@@ -67,7 +76,7 @@
     </option>
   </component>
   <component name="RunManager" selected="CMake Application.CS350Assign">
-    <configuration name="CS350Assign" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CS350Assign" TARGET_NAME="CS350Assign" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CS350Assign" RUN_TARGET_NAME="CS350Assign">
+    <configuration name="CS350Assign" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/trainsta512x512.pgm CLINE_Out.pgm 2" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CS350Assign" TARGET_NAME="CS350Assign" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CS350Assign" RUN_TARGET_NAME="CS350Assign">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -120,6 +129,8 @@
       <workItem from="1572361803988" duration="8532000" />
       <workItem from="1572457471847" duration="20734000" />
       <workItem from="1572574152588" duration="62000" />
+      <workItem from="1572590361836" duration="43000" />
+      <workItem from="1572623304683" duration="14688000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -219,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572497332006</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Update after discussing with professor">
+      <created>1572590393585</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1572590393585</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +286,7 @@
     <MESSAGE value="Fixed CMake.txt by adding new .c files as separate executables" />
     <MESSAGE value="Image subsamples. Need to refine mean statistic usage" />
     <MESSAGE value="Database is complete and so is imSubsample" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database is complete and so is imSubsample" />
+    <MESSAGE value="Update after discussing with professor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update after discussing with professor" />
   </component>
 </project>

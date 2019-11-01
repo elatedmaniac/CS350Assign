@@ -8,7 +8,7 @@
 // Constants and utilities
 char options[9][40] = {"1 Initialize the database", "2 Input new records","3 Search for a record", "4 Delete a record",
                        "5 List all the records", "6 List all records (sorted form)", "7 Save database", "8 Load an existing database", "9 Exit"};
-char fname[] = "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\database.dat";
+char fname[] = "CS350Assign\\database.dat";
 FILE *output;
 FILE *input;
 

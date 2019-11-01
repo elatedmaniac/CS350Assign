@@ -3,62 +3,57 @@
 #include "imSubsample.c"
 #include "iplib2New.h"
 
-#define f "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\data\\bg448x448.pgm"
-#define o "C:\\Users\\Syndikit\\CLionProjects\\CS350Assign\\data\\SAMPLE_OUTPUT.pgm"
-
-int ROWS, COLS, TYPE;
-image_ptr imagePtr, imagePtr2;
+//#define f "bg448x448.pgm"
+//#define o "data//SAMPLE_OUTPUT.pgm"
 
 
-int validate_in(int, int);
+image_ptr imagePtr;
+
 image_ptr read_pnm(char *filename, int *rows, int *cols, int *type);
 int getnum(FILE *fp);
 void write_pnm(image_ptr ptr, char *filename, int rows, int cols, int type);
 
-int validate_in(int redfactor, int dim) {
-    if(dim%redfactor!= 0){
-        return 1;
-    }else{
-        return 0;
-    }
-}
 
 int main(int argc, char **argv) {
-    int rows, cols, type;
-    dbdemo();
+    int i, j, s, x, y;
+    unsigned char avg;
+    int rows, cols, type, n;
+    //dbdemo();
 
-    printf("reading input image ... \n");
 
+
+    printf("Reading input image ... \n");
     imagePtr = read_pnm(argv[1], &rows, &cols, &type);
-    imagePtr = read_pnm(f, &rows, &cols, &type);
-
-    int i, j, n, s, s1, s2;
-    n = 2;
+    n = atoi(argv[3]);
     s = rows/n;
-
-    printf("image read successfully \n");
-    printf("rows=%d, cols=%d, type=%d \n", rows, cols, type);
-
     unsigned char test_out[s][s];
-    unsigned char block[n];
-    for(i=0;i<s;i++){
-        for(j=0;j<s;j++){
-            for(s1=0;s1<rows;s1+n){
-                for(s2=0;s2<cols;s2+n){
-                    block[s2] = imagePtr[s1*cols +s2];
+    unsigned char block[n*n];
+    printf("Image read successfully \n");
+    printf("Rows=%d, Cols=%d, Type=%d\n", rows, cols, type);
+
+    /*
+     * Performs partitioning and image analysis, adding each mean to the array of unsigned chars that will be cast to the image pointer.
+     * n is the reduction factor
+     * s is the number of rows or columns (in the case of a square input image) found by dividing original rows/cols by reduction factor.
+     */
+
+    for(i=0;i<rows;i=i+n){
+        for(j=0;j<cols;j=j+n){
+            for(x=0;x<n;x++){
+                for(y=0;y<n;y++) {
+                    block[x+y] = imagePtr[i*cols+j];
                 }
             }
-            test_out[i][j] = mean(n*n,block);
+            avg = mean(n*n,block);
+            test_out[i/n][j/n] = avg;
         }
+
     }
 
-
-
     image_ptr output_image = (image_ptr) test_out;
+    printf("\nNow writing to image file ... \n");
 
-    printf("\n Now writing to image file ... \n");
-   write_pnm(output_image,o,n,n,type);
-    write_pnm(output_image,argv[3],n,n,type);
+    write_pnm(output_image,argv[2],s,s,type);
     return 0;
 
 }
