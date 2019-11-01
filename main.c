@@ -26,11 +26,11 @@ int validate_in(int redfactor, int dim) {
 int main(int argc, char **argv) {
     int rows, cols, type;
     dbdemo();
-    //int test[5] = {16,8,13,9,10};
-    //printf("reading input image ... \n");
 
-    //imagePtr = read_pnm(argv[1], &rows, &cols, &type);
-    /*imagePtr = read_pnm(f, &rows, &cols, &type);
+    printf("reading input image ... \n");
+
+    imagePtr = read_pnm(argv[1], &rows, &cols, &type);
+    imagePtr = read_pnm(f, &rows, &cols, &type);
 
     int i, j, n, s, s1, s2;
     n = 2;
@@ -57,8 +57,8 @@ int main(int argc, char **argv) {
     image_ptr output_image = (image_ptr) test_out;
 
     printf("\n Now writing to image file ... \n");
-    write_pnm(output_image,o,n,n,type);
-    //write_pnm(output_image,argv[3],n,n,type);*/
+   write_pnm(output_image,o,n,n,type);
+    write_pnm(output_image,argv[3],n,n,type);
     return 0;
 
 }

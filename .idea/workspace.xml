@@ -13,15 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imSubsample.c" beforeDir="false" afterPath="$PROJECT_DIR$/imSubsample.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +118,8 @@
       <workItem from="1572238350214" duration="6209000" />
       <workItem from="1572330702341" duration="1627000" />
       <workItem from="1572361803988" duration="8532000" />
-      <workItem from="1572457471847" duration="18964000" />
+      <workItem from="1572457471847" duration="20734000" />
+      <workItem from="1572574152588" duration="62000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -218,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572425162906</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Database is complete and so is imSubsample">
+      <created>1572497332006</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1572497332006</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +267,7 @@
     <MESSAGE value="Added stats methods to subSample.c" />
     <MESSAGE value="Fixed CMake.txt by adding new .c files as separate executables" />
     <MESSAGE value="Image subsamples. Need to refine mean statistic usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Image subsamples. Need to refine mean statistic usage" />
+    <MESSAGE value="Database is complete and so is imSubsample" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database is complete and so is imSubsample" />
   </component>
 </project>
