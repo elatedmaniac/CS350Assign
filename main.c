@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
     int i, j, s, x, y;
     unsigned char avg;
     int rows, cols, type, n;
-    //dbdemo();
+    dbdemo();
 
 
 

@@ -13,16 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CLINE_Out.pgm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bg448x448.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/bg448x448.pgm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imSubsample.c" beforeDir="false" afterPath="$PROJECT_DIR$/imSubsample.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/minidb.c" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +122,13 @@
       <workItem from="1572457471847" duration="20734000" />
       <workItem from="1572574152588" duration="62000" />
       <workItem from="1572590361836" duration="43000" />
-      <workItem from="1572623304683" duration="14688000" />
+      <workItem from="1572623304683" duration="14737000" />
+      <workItem from="1572643358774" duration="14000" />
+      <workItem from="1572643537103" duration="39000" />
+      <workItem from="1572643942507" duration="2000" />
+      <workItem from="1572671754147" duration="2000" />
+      <workItem from="1573752529306" duration="598000" />
+      <workItem from="1575745425107" duration="646000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -237,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572590393585</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed subsampling algorithm, average method, and command line arguments.">
+      <created>1572643282338</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1572643282338</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +292,7 @@
     <MESSAGE value="Image subsamples. Need to refine mean statistic usage" />
     <MESSAGE value="Database is complete and so is imSubsample" />
     <MESSAGE value="Update after discussing with professor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update after discussing with professor" />
+    <MESSAGE value="Fixed subsampling algorithm, average method, and command line arguments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed subsampling algorithm, average method, and command line arguments." />
   </component>
 </project>
