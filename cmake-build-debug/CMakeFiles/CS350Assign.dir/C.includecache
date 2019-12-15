@@ -6,33 +6,21 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Syndikit/CLionProjects/CS350Assign/imSubsample.c
-iplib2New.h
-C:/Users/Syndikit/CLionProjects/CS350Assign/iplib2New.h
+/Users/michael/Desktop/CS350Assign/iplib2New.h
+stdio.h
+-
+stdlib.h
+-
+
+/Users/michael/Desktop/CS350Assign/main.c
+stdio.h
+-
+stdlib.h
+-
 math.h
 -
-
-C:/Users/Syndikit/CLionProjects/CS350Assign/iplib2New.h
-stdio.h
+pthread.h
 -
-stdlib.h
--
-
-C:/Users/Syndikit/CLionProjects/CS350Assign/main.c
-stdio.h
--
-minidb.c
-C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c
-imSubsample.c
-C:/Users/Syndikit/CLionProjects/CS350Assign/imSubsample.c
 iplib2New.h
-C:/Users/Syndikit/CLionProjects/CS350Assign/iplib2New.h
-
-C:/Users/Syndikit/CLionProjects/CS350Assign/minidb.c
-stdio.h
--
-string.h
--
-stdlib.h
--
+/Users/michael/Desktop/CS350Assign/iplib2New.h
 

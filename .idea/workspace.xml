@@ -2,7 +2,6 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="CS350Assign" targetName="main.c" />
       <config projectName="CS350Assign" targetName="CS350Assign" />
     </generated>
   </component>
@@ -13,10 +12,69 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd5654fa-5c82-41be-8f53-2702311e0346" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assignment_2/a2loops.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cs350x19assgn03.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/IMSAMPLEOUT.pgm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scraps.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLINE_Out.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bg448x448.pgm" beforeDir="false" afterPath="$PROJECT_DIR$/data/bg448x448.pgm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeRCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.14.5/CompilerIdC/a.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/C.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CS350Assign.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/C.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/imSubsample.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/linklibs.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/minidb.c.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/objects.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/objects1.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/main.c.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CS350Assign.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/SAMPLE_OUTPUT.pgm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imSubsample.c" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/imSubsample.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ip03mainSample.c" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/ip03mainSample.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/minidb.c" beforeDir="false" afterPath="$PROJECT_DIR$/assignment_2/minidb.c" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +82,7 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+    <option name="clangWarnings" value="-Wno-unused-variable,-Werror=implicit-function-declaration,-Wshadow,-Wno-shadow-field-in-constructor-modified,-Wno-shadow-ivar,-Wno--Wdangling-else" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
@@ -34,10 +93,16 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,50 +112,34 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assignment_2" />
+      <recent name="$PROJECT_DIR$/data" />
       <recent name="C:\Users\Syndikit\CLionProjects\CS350Assign" />
       <recent name="$PROJECT_DIR$/assignment_1" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="CMake Application.CS350Assign">
-    <configuration name="CS350Assign" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/trainsta512x512.pgm CLINE_Out.pgm 2" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CS350Assign" TARGET_NAME="CS350Assign" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CS350Assign" RUN_TARGET_NAME="CS350Assign">
+  <component name="RunManager">
+    <configuration name="CS350Assign" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="data/winding252x298.pgm data/IMSAMPLEOUT.pgm 2 5" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CS350Assign" TARGET_NAME="CS350Assign" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CS350Assign" RUN_TARGET_NAME="CS350Assign">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main.c" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="CS350Assign" TARGET_NAME="main.c" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CS350Assign" RUN_TARGET_NAME="main.c">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="CMake Application.CS350Assign" />
-      <item itemvalue="CMake Application.main.c" />
-    </list>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -129,6 +178,16 @@
       <workItem from="1572671754147" duration="2000" />
       <workItem from="1573752529306" duration="598000" />
       <workItem from="1575745425107" duration="646000" />
+      <workItem from="1575870386782" duration="24000" />
+      <workItem from="1575870486066" duration="27000" />
+      <workItem from="1575870522899" duration="6141000" />
+      <workItem from="1576268596380" duration="4708000" />
+      <workItem from="1576276160011" duration="26000" />
+      <workItem from="1576276593527" duration="772000" />
+      <workItem from="1576278100909" duration="4000" />
+      <workItem from="1576278116751" duration="191000" />
+      <workItem from="1576278311601" duration="2144000" />
+      <workItem from="1576293784798" duration="36266000" />
     </task>
     <task id="LOCAL-00001" summary="Refactored into temperature and knight header files">
       <created>1569307127138</created>
@@ -294,5 +353,68 @@
     <MESSAGE value="Update after discussing with professor" />
     <MESSAGE value="Fixed subsampling algorithm, average method, and command line arguments." />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed subsampling algorithm, average method, and command line arguments." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="220" y="23" width="1000" height="821" key="#Notifications" timestamp="1575870504365">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="220" y="23" width="1000" height="821" key="#Notifications/0.23.1440.821@0.23.1440.821" timestamp="1575870504365" />
+    <state x="166" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576387439024">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="166" y="56" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1576387439024" />
+    <state x="408" y="157" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575870509940">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="408" y="157" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.821@0.23.1440.821" timestamp="1575870509940" />
+    <state width="1388" height="278" key="GridCell.Tab.0.bottom" timestamp="1576387442943">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="278" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1576387442943" />
+    <state width="1388" height="231" key="GridCell.Tab.0.bottom/0.23.1440.821@0.23.1440.821" timestamp="1576277366476" />
+    <state width="1388" height="278" key="GridCell.Tab.0.center" timestamp="1576387442942">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="278" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1576387442942" />
+    <state width="1388" height="231" key="GridCell.Tab.0.center/0.23.1440.821@0.23.1440.821" timestamp="1576277366475" />
+    <state width="1388" height="278" key="GridCell.Tab.0.left" timestamp="1576387442941">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="278" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1576387442941" />
+    <state width="1388" height="231" key="GridCell.Tab.0.left/0.23.1440.821@0.23.1440.821" timestamp="1576277366475" />
+    <state width="1388" height="278" key="GridCell.Tab.0.right" timestamp="1576387442942">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="278" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1576387442942" />
+    <state width="1388" height="231" key="GridCell.Tab.0.right/0.23.1440.821@0.23.1440.821" timestamp="1576277366476" />
+    <state width="1388" height="289" key="GridCell.Tab.1.bottom" timestamp="1575936507279">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="289" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1575936507279" />
+    <state width="1388" height="289" key="GridCell.Tab.1.center" timestamp="1575936507278">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="289" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1575936507278" />
+    <state width="1388" height="289" key="GridCell.Tab.1.left" timestamp="1575936507278">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="289" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1575936507278" />
+    <state width="1388" height="289" key="GridCell.Tab.1.right" timestamp="1575936507279">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1388" height="289" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1575936507279" />
+    <state x="472" y="86" key="RollbackChangesDialog" timestamp="1576277276269">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="472" y="86" key="RollbackChangesDialog/0.23.1440.821@0.23.1440.821" timestamp="1576277276269" />
+    <state x="98" y="23" key="SettingsEditor" timestamp="1576277364091">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="98" y="1" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1575933428447" />
+    <state x="98" y="23" key="SettingsEditor/0.23.1440.821@0.23.1440.821" timestamp="1576277364091" />
+    <state x="316" y="227" key="com.intellij.ide.util.TipDialog" timestamp="1576278101033">
+      <screen x="0" y="23" width="1440" height="821" />
+    </state>
+    <state x="316" y="227" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1576278101033" />
   </component>
 </project>

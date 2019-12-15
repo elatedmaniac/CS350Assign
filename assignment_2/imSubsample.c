@@ -1,7 +1,6 @@
 //
 // Created by Michael Austin on 2019-10-28.
 //
-#include "iplib2New.h"
 #include <math.h>
 
 
@@ -41,7 +40,3 @@ float stdev(int n, unsigned char vals[]){
 
     return sqrtf((diff/(n-1)));
 }
-
-
-
-

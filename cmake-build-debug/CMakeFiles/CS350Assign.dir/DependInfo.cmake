@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "C:/Users/Syndikit/CLionProjects/CS350Assign/main.c" "C:/Users/Syndikit/CLionProjects/CS350Assign/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.obj"
+  "/Users/michael/Desktop/CS350Assign/main.c" "/Users/michael/Desktop/CS350Assign/cmake-build-debug/CMakeFiles/CS350Assign.dir/main.c.o"
   )
-set(CMAKE_C_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "AppleClang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
